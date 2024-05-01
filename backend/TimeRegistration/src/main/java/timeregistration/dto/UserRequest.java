@@ -4,24 +4,24 @@ import lombok.NoArgsConstructor;
 import timeregistration.entities.User;
 
 @NoArgsConstructor
-public class UserReqeust {
+public class UserRequest {
 
 
     private int employeeNumber;
     private String username;
     private String password;
 
-    public static User getUserEntity(UserReqeust userReqeust){
+    public static User getUserEntity(UserRequest userRequest){
         return User.builder()
-                .employeeNumber(userReqeust.employeeNumber)
-                .username(userReqeust.username)
-                .password(userReqeust.password)
+                .employeeNumber(userRequest.employeeNumber)
+                .username(userRequest.username)
+                .password(userRequest.password)
                 .build();
     }
 
 
 
-    public UserReqeust(User user){
+    public UserRequest(User user){
         this.employeeNumber = user.getEmployeeNumber();
         this.username = user.getUsername();
         this.password = user.getPassword();

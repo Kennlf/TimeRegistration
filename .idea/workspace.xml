@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c434692-047b-4197-a5d7-bf4647aa7087" name="Changes" comment="" />
+    <list default="true" id="3c434692-047b-4197-a5d7-bf4647aa7087" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/TimeRegistration/src/main/java/timeregistration/dto/UserReqeust.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/TimeRegistration/src/main/java/timeregistration/dto/UserRequest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +26,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kennethmacbook/dataKea/Hovedopgave&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Søs/Documents/Git/TimeRegistration/backend/TimeRegistration&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -37,6 +42,8 @@
       <workItem from="1714553861878" duration="90000" />
       <workItem from="1714556582522" duration="51000" />
       <workItem from="1714556647962" duration="22000" />
+      <workItem from="1714566370007" duration="590000" />
+      <workItem from="1714570841004" duration="15000" />
     </task>
     <servers />
   </component>
