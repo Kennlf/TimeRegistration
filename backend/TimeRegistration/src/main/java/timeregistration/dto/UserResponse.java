@@ -1,6 +1,6 @@
 package timeregistration.dto;
 
-import timeregistration.entities.User;
+import timeregistration.entities.Employee;
 
 public class UserResponse {
 
@@ -8,9 +8,9 @@ public class UserResponse {
     private String username;
     private String password;
 
-    public UserResponse(User user){
-        this.employeeNumber = user.getEmployeeNumber();
-        this.username = user.getUsername();
-        this.password = user.getPassword();
+    public UserResponse(Employee employee){
+        this.employeeNumber = employee.getEmployeeNumber();
+        this.username = employee.getUsername();
+        this.password = employee.getPassword();
     }
 }
