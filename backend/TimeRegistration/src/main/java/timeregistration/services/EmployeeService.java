@@ -1,6 +1,7 @@
 package timeregistration.services;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -13,22 +14,35 @@ import java.util.Optional;
 
 @Service
 public class EmployeeService {
-    private EmployeeRepository employeeRepository;
+    private final EmployeeRepository employeeRepository;
 
+    @Autowired
     public EmployeeService(EmployeeRepository employeeRepository){
         this.employeeRepository = employeeRepository;
     }
-    public EmployeeResponse addUser(EmployeeRequest employeeRequest){
+    public EmployeeResponse addEmployee(EmployeeRequest employeeRequest){
 
         Optional<Employee> employee = employeeRepository.findById(employeeRequest.getEmployeeNumber());
         if(employee.isPresent()){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Dette medarbejdernummer eksistere allerede");
+            throw new ResponseStatusException(HttpStatus.CONFLICT, "Dette medarbejdernummer eksistere allerede");
         }
         else{
-            Employee newUser = EmployeeRequest.getEmployeeEntity(employeeRequest);
-            newUser = employeeRepository.save(newUser);
-            return new EmployeeResponse(newUser);
+            Employee newEmployee = EmployeeRequest.getEmployeeEntity(employeeRequest);
+            newEmployee = employeeRepository.save(newEmployee);
+            return new EmployeeResponse(newEmployee);
         }
+    }
+
+    public EmployeeResponse updateEmployee(EmployeeRequest body, int employeeNumber){
+
+        Employee employee = employeeRepository.findById(employeeNumber).orElseThrow(()->
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "Medarbejder kunne ikke findes"));
+
+
+        employee.setUsername(body.getUsername());
+        employee.setPassword(body.getPassword());
+        employeeRepository.save(employee);
+        return new EmployeeResponse(employee);
 
     }
 
