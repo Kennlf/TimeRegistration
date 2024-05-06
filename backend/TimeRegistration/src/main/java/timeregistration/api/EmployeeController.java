@@ -16,8 +16,13 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @PostMapping
-    public EmployeeResponse addUser(@RequestBody EmployeeRequest body){
-        return employeeService.addUser(body);
+    @PostMapping("/add")
+    public EmployeeResponse addEmployee(@RequestBody EmployeeRequest body){
+        return employeeService.addEmployee(body);
+    }
+
+    @PostMapping("/update/{employeeNumber}")
+    public EmployeeResponse updateEmployee(@RequestBody EmployeeRequest body, @PathVariable int employeeNumber){
+        return  employeeService.updateEmployee(body, employeeNumber);
     }
 }
