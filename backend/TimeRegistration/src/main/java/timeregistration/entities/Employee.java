@@ -2,7 +2,6 @@ package timeregistration.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.*;
 
 @Entity
@@ -11,13 +10,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name= "user")
-public class User {
 
+public class Employee {
     @Id
     private int employeeNumber;
     private String username;
-    private String password; //Char arroy kan erstatte string for højere sikkerhed
+    private String password; //Char array kan erstatte string for højere sikkerhed
     //forskel på adgang for medarbejder, leder og eventuelt myndighedsadgang
 
 

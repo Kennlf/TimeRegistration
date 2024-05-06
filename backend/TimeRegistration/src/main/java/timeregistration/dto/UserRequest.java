@@ -1,9 +1,10 @@
 package timeregistration.dto;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
-import timeregistration.entities.User;
-
+import timeregistration.entities.Employee;
 @NoArgsConstructor
+@Getter
 public class UserRequest {
 
 
@@ -11,8 +12,8 @@ public class UserRequest {
     private String username;
     private String password;
 
-    public static User getUserEntity(UserRequest userRequest){
-        return User.builder()
+    public static Employee getUserEntity(UserRequest userRequest){
+        return Employee.builder()
                 .employeeNumber(userRequest.employeeNumber)
                 .username(userRequest.username)
                 .password(userRequest.password)
@@ -21,10 +22,10 @@ public class UserRequest {
 
 
 
-    public UserRequest(User user){
-        this.employeeNumber = user.getEmployeeNumber();
-        this.username = user.getUsername();
-        this.password = user.getPassword();
+    public UserRequest(Employee employee){
+        this.employeeNumber = employee.getEmployeeNumber();
+        this.username = employee.getUsername();
+        this.password = employee.getPassword();
 
     }
 }
