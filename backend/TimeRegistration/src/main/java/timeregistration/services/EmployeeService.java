@@ -4,38 +4,38 @@ package timeregistration.services;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import timeregistration.dto.UserRequest;
-import timeregistration.dto.UserResponse;
+import timeregistration.dto.EmployeeRequest;
+import timeregistration.dto.EmployeeResponse;
 import timeregistration.entities.Employee;
-import timeregistration.repositories.UserRepository;
+import timeregistration.repositories.EmployeeRepository;
 
 import java.util.Optional;
 
 @Service
-public class UserService {
-    private UserRepository userRepository;
+public class EmployeeService {
+    private EmployeeRepository employeeRepository;
 
-    public UserService(UserRepository userRepository){
-        this.userRepository = userRepository;
+    public EmployeeService(EmployeeRepository employeeRepository){
+        this.employeeRepository = employeeRepository;
     }
-    public UserResponse addUser(UserRequest userRequest){
+    public EmployeeResponse addUser(EmployeeRequest employeeRequest){
 
-        Optional<Employee> employee = userRepository.findById(userRequest.getEmployeeNumber());
+        Optional<Employee> employee = employeeRepository.findById(employeeRequest.getEmployeeNumber());
         if(employee.isPresent()){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Dette medarbejdernummer eksistere allerede");
         }
         else{
-            Employee newUser = UserRequest.getUserEntity(userRequest);
-            newUser = userRepository.save(newUser);
-            return new UserResponse(newUser);
+            Employee newUser = EmployeeRequest.getEmployeeEntity(employeeRequest);
+            newUser = employeeRepository.save(newUser);
+            return new EmployeeResponse(newUser);
         }
 
     }
 
-    /*public class UserService {
+    /*public class EmployeeService {
         private List<Employee> userList;
 
-        public UserService() {
+        public EmployeeService() {
             this.userList = new ArrayList<>();
         }
 
