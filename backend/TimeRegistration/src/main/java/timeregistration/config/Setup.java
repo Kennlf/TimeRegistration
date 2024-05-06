@@ -3,17 +3,17 @@ package timeregistration.config;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Controller;
-import timeregistration.repositories.UserRepository;
-import timeregistration.services.UserService;
+import timeregistration.repositories.EmployeeRepository;
+import timeregistration.services.EmployeeService;
 
 @Controller
 public class Setup implements ApplicationRunner {
-    UserService userService;
-    UserRepository userRepository;
+    EmployeeService employeeService;
+    EmployeeRepository employeeRepository;
 
-    public Setup(UserService userService, UserRepository userRepository) {
-        this.userService = userService;
-        this.userRepository = userRepository;
+    public Setup(EmployeeService employeeService, EmployeeRepository employeeRepository) {
+        this.employeeService = employeeService;
+        this.employeeRepository = employeeRepository;
     }
     @Override
     public void run(ApplicationArguments args) throws Exception{
