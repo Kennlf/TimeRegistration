@@ -36,7 +36,7 @@ public class EmployeeService {
     public EmployeeResponse updateEmployee(EmployeeRequest body, int employeeNumber){
 
         Employee employee = employeeRepository.findById(employeeNumber).orElseThrow(()->
-            new ResponseStatusException(HttpStatus.NOT_FOUND, "Medarbejder kunne ikke findes"));
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "Medarbejderen kunne ikke findes"));
 
 
         employee.setUsername(body.getUsername());

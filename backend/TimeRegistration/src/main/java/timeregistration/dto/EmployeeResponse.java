@@ -1,15 +1,14 @@
 package timeregistration.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import timeregistration.entities.Employee;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EmployeeResponse {
 
-    @JsonProperty
     private int employeeNumber;
-    @JsonProperty
     private String username;
-    @JsonProperty
     private String password;
 
     public EmployeeResponse(Employee employee){
