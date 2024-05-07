@@ -33,6 +33,13 @@ public class EmployeeService {
         }
     }
 
+    public EmployeeResponse getSingleEmployee(int employyNumber){
+        Employee employee = employeeRepository.findById(employyNumber).orElseThrow(()->
+                 new ResponseStatusException(HttpStatus.NOT_FOUND, "Medarbejderen med dette medarbejder nummer kan ikke findes"));
+        EmployeeResponse employeeResponse = new EmployeeResponse(employee);
+        return employeeResponse;
+    }
+
     public EmployeeResponse updateEmployee(EmployeeRequest body, int employeeNumber){
 
         Employee employee = employeeRepository.findById(employeeNumber).orElseThrow(()->
