@@ -1,0 +1,35 @@
+.wrapper {
+    height: 200%;
+}
+
+.wrapper h1 {
+    font-size: 50px;
+}
+
+.wrapper .input-box {
+    height: 30px;
+    margin: 10px;
+}
+
+.input-box input{
+    height: 80%;
+    font-size: 100%;
+}
+
+.input-box input::placeholder{
+    font-size: 100%;
+    color: white;
+}
+
+.forgot{
+    height: 50px;
+}
+
+.new{
+    height: 50px;
+}
+.wrapper button{
+    width: 300px;
+    background: transparent;
+}
+
