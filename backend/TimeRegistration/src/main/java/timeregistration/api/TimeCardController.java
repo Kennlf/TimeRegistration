@@ -1,15 +1,12 @@
 package timeregistration.api;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import timeregistration.dto.TimecardRequest;
 import timeregistration.dto.TimecardResponse;
 import timeregistration.services.TimecardService;
 
 @RestController
-//@RequestMapping("api/timeCard")
+@RequestMapping("api/timecard")
 @CrossOrigin
 public class TimeCardController {
 
@@ -19,9 +16,14 @@ public class TimeCardController {
         this.timecardService = timecardService;
     }
 
-    @PostMapping
-    public TimecardResponse addtimeCard(@RequestBody TimecardRequest body){
-        return timecardService.addTimeCard(body);
+    //Session cookie til id - HttpOnly cookie
+    @PostMapping("/test/{id}")
+    public TimecardResponse addtimeCard(@RequestBody TimecardRequest body, @PathVariable int id){
+        // check id mod database at brugeren eksistere.
+
+        return timecardService.addTimeCard(body, id);
+
+
     }
 
 

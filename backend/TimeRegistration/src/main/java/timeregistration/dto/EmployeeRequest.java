@@ -1,10 +1,12 @@
 package timeregistration.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import timeregistration.entities.Employee;
 @NoArgsConstructor
 @Getter
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class EmployeeRequest {
 
     private int employeeNumber;
