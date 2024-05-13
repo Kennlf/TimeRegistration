@@ -16,7 +16,7 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @PostMapping("/add")
+    @PostMapping("/register")
     public EmployeeResponse addEmployee(@RequestBody EmployeeRequest body){
         return employeeService.addEmployee(body);
     }
