@@ -14,7 +14,7 @@ function createNewEmployee(){
     const newEmployee = {}
     newEmployee.firstName = document.getElementById("first-name").value
     newEmployee.lastName = document.getElementById("last-name").value
-    newEmployee.employeeNumber = document.getElementById("employee-number").value
+    newEmployee.email = document.getElementById("email").value
     newEmployee.password = document.getElementById("password").value
 
     const option = {}
@@ -29,7 +29,7 @@ function createNewEmployee(){
 function clearFields(){
     document.getElementById("firstname").value = ""
     document.getElementById("lastname").value = ""
-    document.getElementById("employeeNumber").value = ""
+    document.getElementById("email").value = ""
     document.getElementById("password").value = ""
     setStatusMsg('Brugeren er tilføjet')
 }

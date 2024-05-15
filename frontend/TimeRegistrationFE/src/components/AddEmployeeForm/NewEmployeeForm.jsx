@@ -4,7 +4,7 @@ import './NewEmployeeForm.css';
 const NewEmployeeForm = () => {
     const [firstname, setFirstname] = useState("")
     const [lastName, setLastName] = useState("")
-    const [employeeNumber, setEmployeeNumber] = useState("")
+    const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
     const handleSubmit = (e) => {
@@ -22,7 +22,7 @@ const NewEmployeeForm = () => {
                         <input value={lastName} onChange={(e) => setLastName(e.target.value)} type={"text"} placeholder={"Efternavn"} required/>
                     </div>
                     <div className={"input-box"}>
-                        <input value={employeeNumber} onChange={(e) => setEmployeeNumber(e.target.value)} type={"number"} placeholder={"Medarbejdernr."} required/>
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} type={"email"} placeholder={"Email"} required/>
                     </div>
                     <div className={"input-box"}>
                         <input value={password} onChange={(e) => setPassword(e.target.value)} type={"password"} placeholder={"Password"} required/>
