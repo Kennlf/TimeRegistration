@@ -21,8 +21,8 @@ public class Timecard {
     @Column(unique = true, nullable = false)
     private int timecardNumber;
     private LocalDate date;
-    private float startTime;
-    private float endTime;
+    private double startTime;
+    private double endTime;
     private double dailyHours;
 
     @ManyToOne
