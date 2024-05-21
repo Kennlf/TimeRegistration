@@ -2,12 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './Navibar.css';
+
+
 
 const NaviBar = () =>{
     return(
-        <div>
+        <div >
         <Container>
-        <Navbar fixed="top" data-bs-theme="dark" expand="lg" className="bg-body-tertiary">
+        <Navbar fixed="top" expand="lg">
           <Container>
             <Navbar.Brand href="#home">ACTO</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
