@@ -15,9 +15,9 @@ public class TimecardResponse {
     private int timecardNumber;
     private LocalDate date;
     //@JsonFormat(pattern = "hh:mm",shape = JsonFormat.Shape.STRING)
-    private float startTime;
+    private double startTime;
     //@JsonFormat(pattern = "hh:mm",shape = JsonFormat.Shape.STRING)
-    private float endTime;
+    private double endTime;
     private double dailyHour;
     private int employeeNumber;
 
