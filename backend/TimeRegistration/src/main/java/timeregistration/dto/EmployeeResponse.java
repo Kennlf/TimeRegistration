@@ -2,8 +2,10 @@ package timeregistration.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 import timeregistration.entities.Employee;
 
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class EmployeeResponse {
 
@@ -17,13 +19,4 @@ public class EmployeeResponse {
         this.password = employee.getPassword();
     }
 
-    public int getEmployeeNumber() {
-        return employeeNumber;
-    }
-    public String getUsername() {
-        return username;
-    }
-    public String getPassword() {
-        return password;
-    }
 }
