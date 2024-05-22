@@ -2,12 +2,13 @@ package timeregistration.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.ToString;
+import lombok.*;
 import timeregistration.entities.Timecard;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
+@Setter
+@Getter
 @ToString
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TimecardResponse {

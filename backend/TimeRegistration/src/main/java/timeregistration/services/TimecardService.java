@@ -12,6 +12,9 @@ import timeregistration.entities.Timecard;
 import timeregistration.repositories.EmployeeRepository;
 import timeregistration.repositories.TimecardRepository;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 public class TimecardService {
 
@@ -33,6 +36,14 @@ public class TimecardService {
         newTimecard = timecardRepository.save(newTimecard);
 
         return new TimecardResponse(newTimecard);
+    }
+
+    public TimecardResponse getSingleTimecard(int timecardId){
+        Timecard timecard = timecardRepository.findById(timecardId).orElseThrow(()->
+                new ResponseStatusException(HttpStatus.NOT_FOUND, "Dette kort findes ikke"));
+
+        return new TimecardResponse(timecard);
+
     }
 
 

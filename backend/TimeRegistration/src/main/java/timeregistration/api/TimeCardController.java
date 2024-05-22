@@ -22,8 +22,13 @@ public class TimeCardController {
         // check id mod database at brugeren eksistere.
 
         return timecardService.addTimeCard(body, id);
+    }
+
+    @GetMapping("/find/{id}")
+    public TimecardResponse showSpecificTimecard(@PathVariable int id){
 
 
+        return timecardService.getSingleTimecard(id);
     }
 
 
