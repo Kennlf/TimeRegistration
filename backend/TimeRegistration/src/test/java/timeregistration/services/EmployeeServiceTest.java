@@ -8,8 +8,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import timeregistration.dto.EmployeeRequest;
 import timeregistration.dto.EmployeeResponse;
 import timeregistration.entities.Employee;
+import timeregistration.entities.Timecard;
 import timeregistration.repositories.EmployeeRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,9 +28,10 @@ class EmployeeServiceTest {
     public static void setUpTestData(@Autowired EmployeeRepository employee_Repository) {
         employeeRepository = employee_Repository;
         employeeRepository.deleteAll();
-        Employee employee1 = new Employee(123, "Morten1", "qwerty");
-        Employee employee2 = new Employee(321, "Jens2", "qqqq");
-        Employee employee3 = new Employee(555, "Harry Potter", "ihateron");
+        List<Timecard> emptyList = new ArrayList<>();
+        Employee employee1 = new Employee(123, "Morten1", "qwerty", emptyList);
+        Employee employee2 = new Employee(321, "Jens2", "qqqq", emptyList);
+        Employee employee3 = new Employee(555, "Harry Potter", "ihateron", emptyList);
 
         employeeRepository.save(employee1);
         employeeRepository.save(employee2);
@@ -42,7 +45,8 @@ class EmployeeServiceTest {
 
     @Test
     void addEmployee() {
-        Employee employee = new Employee(999, "Jørgen", "Fido123");
+        List<Timecard> emptyList = new ArrayList<>();
+        Employee employee = new Employee(999, "Jørgen", "Fido123",emptyList);
         EmployeeRequest employeeRequest = new EmployeeRequest(employee);
         EmployeeResponse response = employeeService.addEmployee(employeeRequest);
         assertEquals(999, response.getEmployeeNumber());
@@ -50,7 +54,8 @@ class EmployeeServiceTest {
 
     @Test
     void updateEmployee() {
-        EmployeeRequest employeeRequest = new EmployeeRequest(new Employee(555, "Harry P", "ihateron"));
+        List<Timecard> emptyList = new ArrayList<>();
+        EmployeeRequest employeeRequest = new EmployeeRequest(new Employee(555, "Harry P", "ihateron", emptyList));
         //employeeService.addEmployee(employeeRequest);
         employeeService.updateEmployee(employeeRequest, 555);
 

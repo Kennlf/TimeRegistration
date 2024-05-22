@@ -1,17 +1,30 @@
 package timeregistration.dto;
 
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.*;
+
 import java.time.LocalDate;
 import  java.time.LocalTime;
+
+import timeregistration.entities.Employee;
 import timeregistration.entities.Timecard;
 
+
 @NoArgsConstructor
+@Getter
+@AllArgsConstructor
+@Builder
+@ToString
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TimecardRequest {
 
     private int timecardNumber;
     private LocalDate date;
-    private LocalTime startTime;
-    private LocalTime endTime;
+    //@JsonFormat(shape = JsonFormat.Shape.STRING)
+    private double startTime;
+    //@JsonFormat(shape = JsonFormat.Shape.STRING)
+    private double endTime;
     private double dailyHours;
 
     public static Timecard getTimecardEntity(TimecardRequest timecardRequest){
@@ -32,3 +45,8 @@ public class TimecardRequest {
         this.dailyHours = timecard.getDailyHours();
     }
 }
+
+
+
+
+
