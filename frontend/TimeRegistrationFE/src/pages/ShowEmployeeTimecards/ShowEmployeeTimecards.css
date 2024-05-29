@@ -1,0 +1,12 @@
+.table>:not(caption)>*>* {
+
+    background-color: transparent;
+}
+
+.text-center  {
+    color: white;
+}
+
+.text-color {
+    color: white;
+}
