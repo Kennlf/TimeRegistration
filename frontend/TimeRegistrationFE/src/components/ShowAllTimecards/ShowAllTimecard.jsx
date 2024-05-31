@@ -1,6 +1,9 @@
-import { useEffect, useState } from "react";
-import "./ShowAllTimecard.jsx"
+import { useEffect, useMemo, useState } from "react";
+import "./ShowAllTimecard.css"
 import { API_URL } from "../../settings.jsx";
+import Table from "../Table/Table.jsx";
+import { Container } from "react-bootstrap";
+
 
 const URL = API_URL + "timecard/getAll"
 
@@ -25,13 +28,41 @@ const ShowTimecard = () => {
     fetchTimecard()
 }, [])
 
+const columns = useMemo(() => [
+    {
+      Header: "Timeseddelsnr",
+      accessor: "timecardNumber"  
+    },
+    {
+        Header: "Dato",
+        accessor: "date",
+    },
+    {
+        Header: "Starttid",
+        accessor: "startTime",
+    },
+    {
+        Header: "Sluttid",
+        accessor: "endTime",
+    },
+    {
+        Header: "Total arbejdstid",
+        accessor: "dailyHour",
+    },
+    {
+        Header: "Medarbejdernr.",
+        accessor: "employeeNumber"
+    }
+],
+[]
+)
 
-    /* return <div>
-        <ul>
-            {timecard.map((timecard =>
-            <li key={timecard.timecardNumber}>{timecard.timecardNumber}</li>))}
-        </ul>
-    </div> */
-}
+return (
+    <Container>
+        <Table columns={columns} data={timecard}/>
+    </Container>
+)
+
+};
 
 export default ShowTimecard
