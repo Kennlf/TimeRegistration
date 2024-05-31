@@ -21,14 +21,11 @@ public class Timecard {
     @Column(unique = true, nullable = false)
     private int timecardNumber;
     private LocalDate date;
-    private double startTime;
-    private double endTime;
+    private LocalTime startTime;
+    private LocalTime endTime;
     private double dailyHours;
 
     @ManyToOne
     private Employee employee;
-
-
-
 }
 
