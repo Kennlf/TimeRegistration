@@ -46,6 +46,14 @@ public class TimecardService {
 
     }
 
+    public List<TimecardResponse> getAllTimecards(){
+        List<Timecard> timecards = timecardRepository.findAll();
+        List<TimecardResponse> response = timecards
+                .stream().map(TimecardResponse::new)
+                .collect(Collectors.toList());
+        return response;
+    }
+
 
     /*public TimecardResponse updateTimecard(TimecardRequest body, int employeeNumber) {
         //int employeeNumber = body.getEmployeeNumber? Bør vi bare sende det hele i body og så hive det ud af.

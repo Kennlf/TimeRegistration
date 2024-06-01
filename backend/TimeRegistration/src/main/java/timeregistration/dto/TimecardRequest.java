@@ -22,9 +22,9 @@ public class TimecardRequest {
     private int timecardNumber;
     private LocalDate date;
     //@JsonFormat(shape = JsonFormat.Shape.STRING)
-    private double startTime;
+    private LocalTime startTime;
     //@JsonFormat(shape = JsonFormat.Shape.STRING)
-    private double endTime;
+    private LocalTime endTime;
     private double dailyHours;
 
     public static Timecard getTimecardEntity(TimecardRequest timecardRequest){

@@ -6,6 +6,7 @@ import lombok.*;
 import timeregistration.entities.Timecard;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Setter
 @Getter
@@ -16,9 +17,9 @@ public class TimecardResponse {
     private int timecardNumber;
     private LocalDate date;
     //@JsonFormat(pattern = "hh:mm",shape = JsonFormat.Shape.STRING)
-    private double startTime;
+    private LocalTime startTime;
     //@JsonFormat(pattern = "hh:mm",shape = JsonFormat.Shape.STRING)
-    private double endTime;
+    private LocalTime endTime;
     private double dailyHour;
     private int employeeNumber;
 
