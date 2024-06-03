@@ -1,0 +1,9 @@
+.Calendar {
+
+    background-color: white;
+    height: 100vh - 56px;
+    overflow: hidden;
+    width: 150vh;
+    flex-grow: 1;
+    color: #ffa422;
+}

@@ -4,8 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from "./components/LoginForm/LoginForm.jsx";
 import NewEmployeeForm from "./components/AddEmployeeForm/NewEmployeeForm.jsx";
 import NaviBar from './components/NavBar/Navibar.jsx';
-import ShowTimecard from './components/EmployeeShowTime/ShowTimecard.jsx';
-import ShowEmployeeTimecards from './pages/ShowEmployeeTimecards/ShowEmployeeTimecards.jsx';
+import ShowTimecard from './components/ShowAllTimecards/ShowAllTimecard.jsx';
+import ShowEmployeeTimecards from './pages/ShowAllTimecards/ShowAllTimecardsHTML.jsx';
+import RegisterTime from './components/EmployeeRegisterTime/RegisterTime.jsx'
+import BasicCalendar from './components/Calendar/Calendar.jsx';
+
 
 
 function App() {
@@ -13,10 +16,12 @@ function App() {
         <>
         <NaviBar/>
         <Routes>
+                <Route path='calendar' element={<BasicCalendar />} />
                 <Route path="/" element={<LoginForm />} />
                 <Route path="/register" element={<NewEmployeeForm />} />
                 <Route path='/show' element={<ShowTimecard />} />
                 <Route path='/test' element={<ShowEmployeeTimecards />} />
+                <Route path='/registerTime' element={<RegisterTime />} />
         </Routes>
         </>
     )
