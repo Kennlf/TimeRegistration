@@ -1,33 +1,44 @@
 import { useState } from 'react';
 import './NewEmployeeForm.css';
 import { API_URL }  from '../../settings';
+import { useNavigate } from 'react-router-dom';
 const URL = API_URL + "user/register"
 
 const NewEmployeeForm = () => {
     const [firstname, setFirstname] = useState("")
     const [lastName, setLastName] = useState("")
-    const [username, setUserName] = useState("")
+    const [mail, setMail] = useState("")
     const [password, setPassword] = useState("")
     // Det ikke sikkert denne er lavet rigtigt men før skrev man i begge password felter på en gang
     // Der bør også laves en sammenligning af de 2 felter.
-    const [password2, setPassword2] = useState("") 
-    const [employeeNumber, setEmployeeNumber] = useState(444444) 
+    const [confirmPassword, setconfirmPassword] = useState("") 
 
-    
+    const navigate = useNavigate()
     
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const employee = {employeeNumber, username, password};
+        if(password !== confirmPassword){
+            alert("Password matched ikke");
+            return;
+        }
+        
+
+        const employee = {mail, password};
 
         fetch(URL,{
             method: 'POST',
             headers: {"content-Type": "application/json"},
             body: JSON.stringify(employee)
-        }).then(() =>{
+        }).then(response =>{
+            if (response.ok){
+                navigate("/registerTime")
             console.log('new employee added')
             console.log(employee)
+            } else {
+                console.error("medarbejderen blev ikke oprettet ordentlig", response.statusText)
+            }
         })
         
 
@@ -44,13 +55,13 @@ const NewEmployeeForm = () => {
                         <input value={lastName} onChange={(e) => setLastName(e.target.value)} type={"text"} placeholder={"Efternavn"} required/>
                     </div>
                     <div className={"input-box"}>
-                        <input value={username} onChange={(e) => setUserName(e.target.value)} type={"email"} placeholder={"Email"} required/>
+                        <input value={mail} onChange={(e) => setMail(e.target.value)} type={"email"} placeholder={"Email"} required/>
                     </div>
                     <div className={"input-box"}>
                         <input value={password} onChange={(e) => setPassword(e.target.value)} type={"password"} placeholder={"Password"} required/>
                     </div>
                     <div className={"input-box"}>
-                        <input value={password2} onChange={(e) => setPassword2(e.target.value)} type={"password"} placeholder={"Password"} required/>
+                        <input value={confirmPassword} onChange={(e) => setconfirmPassword(e.target.value)} type={"password"} placeholder={"Password"} required/>
                     </div>
 
                     <button type={"submit"}>Opret</button>

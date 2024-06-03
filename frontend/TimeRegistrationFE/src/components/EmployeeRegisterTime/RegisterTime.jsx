@@ -17,6 +17,11 @@ const RegisterTimeForm = () => {
         const calculateDailyHour = () => {
             const start = new Date(`2000-01-01T${startTime}`)
             const end = new Date(`2000-01-01T${endTime}`)
+            //Handles negativ timespan
+            if(end < start){
+                end.setDate(end.getDate( + 1))
+            }
+
             const differenceMilsec = end -start
             const differenceHours = differenceMilsec / (1000*60*60)
             setDailyHour(differenceHours.toFixed(2))
@@ -43,7 +48,7 @@ const RegisterTimeForm = () => {
             body: JSON.stringify(timecard)
         }).then(response => {
             if (response.ok){
-                navigate("/show")
+                navigate("/registerTime")
             } else {
                 console.error("Registering af timeseddel fejlede", response.statusText)
             }
