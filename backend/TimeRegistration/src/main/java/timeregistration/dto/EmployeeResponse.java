@@ -10,12 +10,12 @@ import timeregistration.entities.Employee;
 public class EmployeeResponse {
 
     private int employeeNumber;
-    private String username;
+    private String email;
     private String password;
 
     public EmployeeResponse(Employee employee){
         this.employeeNumber = employee.getEmployeeNumber();
-        this.username = employee.getUsername();
+        this.email = employee.getEmail();
         this.password = employee.getPassword();
     }
 

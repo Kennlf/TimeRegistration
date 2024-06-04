@@ -13,6 +13,7 @@ import timeregistration.repositories.EmployeeRepository;
 import timeregistration.repositories.TimecardRepository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -49,6 +50,15 @@ public class TimecardService {
     public List<TimecardResponse> getAllTimecards(){
         List<Timecard> timecards = timecardRepository.findAll();
         List<TimecardResponse> response = timecards
+                .stream().map(TimecardResponse::new)
+                .collect(Collectors.toList());
+        return response;
+    }
+
+    public List<TimecardResponse> getEmployeeAll(int id) {
+        Optional <Employee> employee = employeeRepository.findById(id);
+        List<Timecard> employeeTimecards = timecardRepository.findTimecardsByEmployee(employee);
+        List<TimecardResponse> response = employeeTimecards
                 .stream().map(TimecardResponse::new)
                 .collect(Collectors.toList());
         return response;

@@ -10,20 +10,20 @@ import timeregistration.entities.Employee;
 public class EmployeeRequest {
 
     private int employeeNumber;
-    private String username;
+    private String email;
     private String password;
 
     public static Employee getEmployeeEntity(EmployeeRequest employeeRequest){
         return Employee.builder()
                 .employeeNumber(employeeRequest.employeeNumber)
-                .username(employeeRequest.username)
+                .email(employeeRequest.email)
                 .password(employeeRequest.password)
                 .build();
     }
 
     public EmployeeRequest(Employee employee){
         this.employeeNumber = employee.getEmployeeNumber();
-        this.username = employee.getUsername();
+        this.email = employee.getEmail();
         this.password = employee.getPassword();
     }
 }

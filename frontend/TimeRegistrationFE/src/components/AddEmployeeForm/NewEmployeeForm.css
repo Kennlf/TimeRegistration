@@ -18,5 +18,13 @@
 
 .input-box input::placeholder{
     font-size: 100%;
-    color: white;
+    color: #ffa422;
+}
+
+h1 {
+    color: #ffa422;
+}
+
+button {
+    color: #ffa422;
 }

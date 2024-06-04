@@ -1,9 +1,6 @@
 package timeregistration.entities;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.ArrayList;
@@ -18,8 +15,9 @@ import java.util.List;
 @Builder
 public class Employee {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int employeeNumber;
-    private String username;
+    private String email;
     private String password; //Char array kan erstatte string for højere sikkerhed
     //forskel på adgang for medarbejder, leder og eventuelt myndighedsadgang
 

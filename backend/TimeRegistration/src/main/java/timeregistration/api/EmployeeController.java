@@ -5,6 +5,8 @@ import timeregistration.dto.EmployeeRequest;
 import timeregistration.dto.EmployeeResponse;
 import timeregistration.services.EmployeeService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("api/user")
 @CrossOrigin
@@ -24,5 +26,11 @@ public class EmployeeController {
     @PostMapping("/update/{employeeNumber}")
     public EmployeeResponse updateEmployee(@RequestBody EmployeeRequest body, @PathVariable int employeeNumber){
         return  employeeService.updateEmployee(body, employeeNumber);
+    }
+
+    @GetMapping("/getAllEmployee")
+    public List<EmployeeResponse> getAllEmployee(){
+        List<EmployeeResponse> response = employeeService.getAllEmployees();
+        return response;
     }
 }
