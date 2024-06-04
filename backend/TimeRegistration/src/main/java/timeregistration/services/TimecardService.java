@@ -54,6 +54,10 @@ public class TimecardService {
         return response;
     }
 
+    public List<TimecardResponse> getEmployeeAll(int id) {
+        return null;
+    }
+
 
     /*public TimecardResponse updateTimecard(TimecardRequest body, int employeeNumber) {
         //int employeeNumber = body.getEmployeeNumber? Bør vi bare sende det hele i body og så hive det ud af.

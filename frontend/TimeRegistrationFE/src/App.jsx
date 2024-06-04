@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import LoginForm from "./components/LoginForm/LoginForm.jsx";
 import NewEmployeeForm from "./components/AddEmployeeForm/NewEmployeeForm.jsx";
 import NaviBar from './components/NavBar/Navibar.jsx';
-import ShowTimecard from './components/EmployeeShowTime/ShowTimecard.jsx';
+import ShowTimecard from './components/ShowAllTimecards/ShowAllTimecard.jsx';
 import ShowEmployeeTimecards from './pages/ShowEmployeeTimecards/ShowEmployeeTimecards.jsx';
 
 
