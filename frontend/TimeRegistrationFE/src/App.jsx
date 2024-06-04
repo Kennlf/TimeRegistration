@@ -6,6 +6,8 @@ import NewEmployeeForm from "./components/AddEmployeeForm/NewEmployeeForm.jsx";
 import NaviBar from './components/NavBar/Navibar.jsx';
 import ShowTimecard from './components/ShowAllTimecards/ShowAllTimecard.jsx';
 import RegisterTime from './components/EmployeeRegisterTime/RegisterTime.jsx'
+import BasicCalendar from './components/Calendar/Calendar.jsx';
+
 
 
 
@@ -14,6 +16,7 @@ function App() {
         <>
         <NaviBar/>
         <Routes>
+                <Route path='calendar' element={<BasicCalendar />} />
                 <Route path="/" element={<LoginForm />} />
                 <Route path="/register" element={<NewEmployeeForm />} />
                 <Route path='/show' element={<ShowTimecard />} />
