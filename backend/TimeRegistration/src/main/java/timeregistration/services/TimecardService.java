@@ -63,25 +63,4 @@ public class TimecardService {
                 .collect(Collectors.toList());
         return response;
     }
-
-
-    /*public TimecardResponse updateTimecard(TimecardRequest body, int employeeNumber) {
-        //int employeeNumber = body.getEmployeeNumber? Bør vi bare sende det hele i body og så hive det ud af.
-
-        //Skal rettes til at finde specifikt kort på både employeenumber og dato
-        Timecard timecard = timecardRepository.findById(employeeNumber).orElseThrow(() ->
-                new ResponseStatusException(HttpStatus.NOT_FOUND, "Dette Timecard kunne ikke findes."));
-
-        Employee employee = employeeRepository.findById(employeeNumber).orElseThrow(() ->
-                new ResponseStatusException(HttpStatus.NOT_FOUND, "Denne medarbjeder kunne ikke findes."));
-
-        timecard.setTimecardNumber(body.getTimecardNumber());
-        timecard.setDate(body.getDate());
-        timecard.setStartTime(body.getStartTime());
-        timecard.setEndTime(body.getEndTime());
-        timecard.setDailyHours(body.getDailyHours());
-        timecard.setEmployee(employee);
-        Timecard newcard = timecardRepository.save(timecard);
-        return new TimecardResponse(newcard);
-    }*/
 }

@@ -61,7 +61,7 @@ class EmployeeServiceTest {
 
         EmployeeResponse employeeResponse = employeeService.getSingleEmployee(555);
         assertEquals(555, employeeResponse.getEmployeeNumber());
-        assertEquals("Harry P", employeeResponse.getUsername());
+        assertEquals("Harry P", employeeResponse.getEmail());
 
     }
 }

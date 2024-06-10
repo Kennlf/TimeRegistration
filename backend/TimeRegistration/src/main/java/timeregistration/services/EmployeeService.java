@@ -62,38 +62,4 @@ public class EmployeeService {
         return response;
     }
 
-    /*public class EmployeeService {
-        private List<EmployeeImpl> userList;
-
-        public EmployeeService() {
-            this.userList = new ArrayList<>();
-        }
-
-        public HttpStatus addUser(EmployeeImpl user) {
-            if (!userExists(user)) {
-                userList.add(user);
-                return HttpStatus.CREATED;
-            } else {
-                return HttpStatus.CONFLICT;
-            }
-        }
-
-        public HttpStatus findUser(String username) {
-            for (EmployeeImpl user : userList) {
-                if (user.getName().equals(username)) {
-                    return HttpStatus.OK;
-                }
-            }
-            return HttpStatus.NOT_FOUND;
-        }
-
-        private boolean userExists(EmployeeImpl user) {
-            for (EmployeeImpl existingUser : userList) {
-                if (existingUser.getName().equals(user.getName())) {
-                    return true;
-                }
-            }
-            return false;
-        }*/
-
 }
