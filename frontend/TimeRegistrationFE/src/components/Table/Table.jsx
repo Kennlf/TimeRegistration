@@ -3,6 +3,9 @@ import { useSortBy, useTable } from "react-table";
 
 const Table = ({columns, data}) => {
 
+    //With inspiration from https://medium.com/@thewidlarzgroup/react-table-7-sorting-filtering-pagination-and-more-6bc28af104d6 
+    //and Usman Abdur Rehman from https://www.youtube.com/watch?v=Opjbv-TOb14&t=1309s
+
     const memoizedColumns = useMemo(() => columns, [columns])
     const memoizedData = useMemo(() => data, [data])
 

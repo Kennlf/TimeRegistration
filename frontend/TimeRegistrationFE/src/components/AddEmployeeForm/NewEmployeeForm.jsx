@@ -9,8 +9,6 @@ const NewEmployeeForm = () => {
     const [lastName, setLastName] = useState("")
     const [mail, setMail] = useState("")
     const [password, setPassword] = useState("")
-    // Det ikke sikkert denne er lavet rigtigt men før skrev man i begge password felter på en gang
-    // Der bør også laves en sammenligning af de 2 felter.
     const [confirmPassword, setconfirmPassword] = useState("") 
 
     const navigate = useNavigate()
@@ -39,9 +37,7 @@ const NewEmployeeForm = () => {
             } else {
                 console.error("medarbejderen blev ikke oprettet ordentlig", response.statusText)
             }
-        })
-        
-
+        })        
     }
 
         return (
@@ -70,20 +66,6 @@ const NewEmployeeForm = () => {
         );
       
 }
-
-/* function newEmployee(){
-
-    const employee = {employeeNumber, username, password};
-
-        fetch(URL,{
-            method: 'POST',
-            headers: {"content-Type": "application/json"},
-            body: JSON.stringify(employee)
-        }).then(() =>{
-            console.log('new employee added')
-            console.log(employee)
-        })
-} */
 
 
 export default NewEmployeeForm

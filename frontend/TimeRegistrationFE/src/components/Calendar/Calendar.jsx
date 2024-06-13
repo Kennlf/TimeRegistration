@@ -4,6 +4,9 @@ import 'moment/locale/da'
 import "react-big-calendar/lib/css/react-big-calendar.css"
 import './Calendar.css'
 
+//With inspiration from Usman Abdur Rehman from https://www.youtube.com/watch?v=Opjbv-TOb14&t=1309s
+//and from https://medium.com/@sajclarke/how-to-populate-react-big-calendar-with-data-from-api-b89dc7362d8
+
 moment.locale('da')
 
 const localizer = momentLocalizer(moment)

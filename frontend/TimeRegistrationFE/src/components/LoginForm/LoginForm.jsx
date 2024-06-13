@@ -24,9 +24,6 @@ const LoginForm = () => {
                     </div>
                     <button type={"submit"}>Login</button>
                 </form>
-                {/* <div className={"new-user"}>
-                <a href={'./register'}>Ny bruger? Opret bruger</a>
-                </div> */}
             </div>
         );
     }

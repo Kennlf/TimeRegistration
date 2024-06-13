@@ -4,7 +4,6 @@ import { API_URL }  from '../../settings';
 
 
 const RegisterTimeForm = () => {
-    //const [timecardNumber, setTimecardNumber] = useState("")
     const [date, setDate] = useState("")
     const [startTime, setStartTime] = useState("")
     const [endTime, setEndTime] = useState("")
@@ -18,6 +17,7 @@ const RegisterTimeForm = () => {
             const start = new Date(`2000-01-01T${startTime}`)
             const end = new Date(`2000-01-01T${endTime}`)
             //Handles negativ timespan
+            //This calculation is currently not correct 
             if(end < start){
                 end.setDate(end.getDate( + 1))
             }

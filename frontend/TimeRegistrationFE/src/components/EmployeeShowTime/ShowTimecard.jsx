@@ -25,13 +25,6 @@ const ShowTimecard = () => {
     fetchTimecard()
 }, [])
 
-
-    /* return <div>
-        <ul>
-            {timecard.map((timecard =>
-            <li key={timecard.timecardNumber}>{timecard.timecardNumber}</li>))}
-        </ul>
-    </div> */
 }
 
 export default ShowTimecard

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4576e770-e95d-4590-8c91-460002aa56ba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/TimeRegistrationFE/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,20 +36,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kennethmacbook/dataKea/Hovedopgave/TimeRegistration/backend&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;74e5f145eadb163cba531719aea7c3f9&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Søs/Documents/Git/TimeRegistration/backend/TimeRegistration",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "74e5f145eadb163cba531719aea7c3f9"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TimeRegistrationApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
@@ -76,6 +76,7 @@
       <workItem from="1716282545438" duration="160000" />
       <workItem from="1716282717384" duration="322000" />
       <workItem from="1716283174554" duration="1330000" />
+      <workItem from="1717537388565" duration="24000" />
     </task>
     <servers />
   </component>

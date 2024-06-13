@@ -7,6 +7,8 @@ import { Container } from "react-bootstrap";
 
 const URL = API_URL + "timecard/getAll"
 
+//With inspiration fra https://medium.com/@thewidlarzgroup/react-table-7-sorting-filtering-pagination-and-more-6bc28af104d6
+
 const ShowTimecard = () => {
     const [timecard, setTimecard] = useState([])
     const [fetchError, setFetchError] = useState(null);

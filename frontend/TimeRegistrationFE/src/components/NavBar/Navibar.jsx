@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Navibar.css';
 
-
+//Copied from react-bootstrap.netlify.app/docs/components/navbar
 
 const NaviBar = () =>{
     return(
