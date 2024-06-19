@@ -31,9 +31,9 @@ public class Setup implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception{
 
         List<Timecard> emptyList = new ArrayList<>();
-        Employee employee1 = new Employee(123, "RonWeasly", "qwerty", emptyList);
-        Employee employee2 = new Employee(321, "Terkel", "qqqq", emptyList);
-        Employee employee3 = new Employee(555, "JohnDoe", "ihateron", emptyList);
+        Employee employee1 = new Employee( 123, "RonWeasly@Setup.dk", "qwerty", emptyList);
+        Employee employee2 = new Employee(321, "TerkelSetup.com", "qqqq", emptyList);
+        Employee employee3 = new Employee(555, "JohnDoeSetup.nu", "ihateron", emptyList);
 
         employeeRepository.save(employee1);
         employeeRepository.save(employee2);
