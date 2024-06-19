@@ -11,7 +11,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Builder
 public class Employee {
     @Id
@@ -23,6 +22,7 @@ public class Employee {
 
     @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     private List<Timecard> timecardList = new ArrayList<>();
+
 
     public void addTimecard(Timecard timecard){
         timecardList.add(timecard);
