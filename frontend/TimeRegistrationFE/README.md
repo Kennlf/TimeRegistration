@@ -1,8 +1,18 @@
-# React + Vite
+#TimeRegistration
+TimeRegistration is a student project for Applied Computer Science edication
+A small and simpel time registration application for companies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#Installation
+Install the dependencies
+```bash
+npm install
+```
 
-Currently, two official plugins are available:
+#Start
+Start the app
+```bashgit 
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#License
+[MIT](https://choosealicense.com/licenses/mit/)
